@@ -5,21 +5,21 @@ namespace Mortezamasumi\FbMars\Tests;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
-use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use function Orchestra\Testbench\default_migration_path;
+use Filament\FilamentServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
-use Mortezamasumi\FbMars\FbMarsServiceProvider;
 use Mortezamasumi\FbMars\Tests\Services\FbMarsPanelProvider;
+use Mortezamasumi\FbMars\FbMarsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+
+use function Orchestra\Testbench\default_migration_path;
 
 class TestCase extends Orchestra
 {
@@ -35,8 +35,8 @@ class TestCase extends Orchestra
     protected function defineEnvironment($app)
     {
         // config()->set('app.key', 'base64:Hupx3yAySikrM2/edkZQNQHslgDWYfiBfCuSThJ5SK8=');
-        config()->set('database.default', 'testing');
-        config()->set('queue.batching.database', 'testing');
+        // config()->set('database.default', 'testing');
+        // config()->set('queue.batching.database', 'testing');
         // config()->set('auth.providers.users.model', '\Tests\Models\User');
 
         /*
